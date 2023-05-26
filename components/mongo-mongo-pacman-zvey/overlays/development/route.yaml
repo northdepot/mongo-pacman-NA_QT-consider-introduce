@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: mongo-mongo-pacman-zvey
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: mongo-mongo-pacman-zvey
+    app.kubernetes.io/part-of: mongo-pacman
+  name: mongo-mongo-pacman-zvey
+spec:
+  path: /
+  port:
+    targetPort: 27017
+  to:
+    kind: Service
+    name: mongo-mongo-pacman-zvey
+    weight: null
+status: {}

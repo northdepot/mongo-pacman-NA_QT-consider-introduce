@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: mongo-mongo-pacman-zvey
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/northdepot/user1-tenant/mongo-pacman/mongo-mongo-pacman-zvey@sha256:f7d72b25d8923b8be61c5babee73c56ba77d8af6bcac28bc948b6b454ff20425
+        name: container-image
+        resources: {}
+status: {}
